@@ -1,0 +1,29 @@
+<svg version="1.1"
+    width="300"
+    height="300"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <pattern patternUnits="userSpaceOnUse" x="0" y="0" width="100" height="100" id="grid">
+            <rect x="0" y="0" width="100" height="100" fill="none" stroke="grey"  stroke-width="4"/>
+        </pattern>
+        <g id="single-curve">
+            <path d="M 50 100 a 50 50 0 0 1 50 -50" fill="none" stroke="#bb3333" stroke-width="15" />
+        </g>
+        <g id="double-curve">
+            <path d="M 50 100 a 50 50 0 0 1 50 -50" fill="none" stroke="#9933ee" stroke-width="30" />
+            <path d="M 50 100 a 50 50 0 0 1 50 -50" fill="none" stroke="#bbddff" stroke-width="20" />
+        </g>
+        <g id="both-curves">
+            <use href="#single-curve" />
+            <use href="#double-curve" transform="rotate(180 50 50)" />
+        </g>
+    </defs>
+    <rect x="0" y="0" width="500" height="500" fill="url(#grid)" />
+    <use href="#single-curve" x="100" />
+    <use href="#single-curve" y="100" />
+    <use href="#both-curves" x="100" y="100" transform="rotate(180 150 150)" />
+    <use href="#double-curve" x="200" y="100" transform="rotate(90 250 150)" />
+    <use href="#single-curve" y="200" transform="rotate(180 50 250)" />
+    <use href="#double-curve" x="100" y="200" transform="rotate(270 150 250)" />
+    <use href="#double-curve" x="200" y="200" transform="rotate(180 250 250)" />
+</svg>
